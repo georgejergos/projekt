@@ -1,0 +1,21 @@
+{{>header}}
+<div class="products-header">
+    <h1>OUR PRODUCTS</h1>
+</div>
+<div class="products-card-stor-Container">
+    {{#products}}
+    <div class="products-cards">
+        <div class="products-cards-content">
+            <img src="{{ProductPicture}}" alt="Sko">
+            <h4>{{ProductName}}</h4>
+            <div class="products-text">
+                <p>AIR FORCE 1 LOW SUPREME MCO CB</p>
+            </div>
+            <p>{{ProductPrice}} kr</p>
+            <button onclick="window.location.href ='productinfo11.html';">More information</button>{{ProductId}}
+        </div>
+    </div>
+    {{/products}}
+
+</div>
+{{>footer}}

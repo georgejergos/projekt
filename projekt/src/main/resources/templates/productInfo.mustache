@@ -1,0 +1,47 @@
+{{>header}}
+<div class="product-info-container">
+    <div class="card-product-info">
+        <div class="card-product-content">
+            <h1>{{product.ProductName}}</h1>
+            <img src="{{product.ProductPicture}} "alt="image">
+            <p class="product-price"><b>{{product.ProductPrice}} kr</b></p>
+            <p class="about-vat">INCL. VAT IN EU, PACKING AND SHIPPING</p>
+            <p>Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. It
+                was created for former NBA player and 5 time NBA MVP Michael Jordan</p>
+            <button class="button-buy" id="myBtn" onclick="myFunction()">Buy</button>
+            <button class="button-back" onclick="window.location.href = 'index.html';">Back</button>
+
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>The product is now in your shopping cart!</p>
+        <button class="button-buy" onclick="window.location.href = '/cart';"> To shopping cart!</button>
+        <button class="button-back-message" onclick="window.location.href = 'index.html';">Continue
+            shopping</button>
+    </div>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>{{>footer}}

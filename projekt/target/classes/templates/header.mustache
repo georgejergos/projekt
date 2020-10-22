@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Sneakers shopping Website" content="Description of our website">
+    <title>Sneakers Heads</title>
+    <link rel="stylesheet" href="http://users.du.se/~h19geoge/projekt/css/main.css">
+    <script src="https://kit.fontawesome.com/a4e182b4a5.js" crossorigin="anonymous"></script>
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo" ><a href="/adminview"><i class="fas fa-users-cog" style="color:white;"></i></a></div>
+    <div class="site-name" style="padding: 0px 400px 0px 500px;">
+        <p>Sneaker Heads</p>
+    </div>
+        <div class="basket">
+            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+        </div>
+</div>
+
+<div class="meny">
+    <div class="meny-Link">
+        <ul>
+            <li><a href="/mainview">Home</a></li>
+        </ul>
+    </div>
+    <div class="meny-Link meny-Link-toggle">
+        <ul>
+            <li><i class="fas fa-bars"></i></li>
+        </ul>
+    </div>
+    <nav class="meny-Items">
+        <div class="meny-Link">
+            <ul>
+                <li><a href="/productView">Products</a></li>
+            </ul>
+        </div>
+        <div class="meny-Link">
+            <ul>
+                <li><a href="#">New releases</a></li>
+            </ul>
+        </div>
+        <div class="meny-Link">
+            <ul>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<script>
+    function classToggle() {
+        const navs = document.querySelectorAll('.meny-Items')
+        navs.forEach(nav => nav.classList.toggle('meny-ToggleShow'));
+    }
+    document.querySelector('.meny-Link-toggle')
+            .addEventListener('click', classToggle);
+</script>
+
+
+</body>
+</html>

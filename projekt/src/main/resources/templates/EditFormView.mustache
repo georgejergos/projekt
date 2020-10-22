@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title>Student Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Form</h1>
+    <h5>Please fill the form below! </h5>
+    <form method="post" action="/" class="was-validated">
+        <div class="form-group">
+            <br>
+            <label for="name">Name: </label>
+            <input type="text" class="form-control" id="name" placeholder="Please enter name" name="name" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="UserName">Username :</label>
+            <input type="text" class="form-control" id="UserName" placeholder="Enter Username" name="Username" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Invalid username please choose a valid one!</div>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="UserMobileNumber">Mobile Number :</label>
+            <input type="number" class="form-control" id="UserMobileNumber" placeholder="Enter Mobile Number"
+                   name="Mobile_number " required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Invalid mobile number please choose a valid one!</div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="UserEmail">Email :</label>
+            <input type="email" class="form-control" id="UserEmail" placeholder="Enter a valid email address"
+                   name="Email " required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Invalid email address please choose a valid one!</div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

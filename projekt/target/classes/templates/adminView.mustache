@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Products List</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    </head>
+    <body>
+        <h1>Products List</h1>
+
+        <div>
+          <!--  <nobr>
+                <a href="/users/add">Add User</a> |
+                <a href="/">Back to Index</a>
+            </nobr>-->
+        </div>
+        <br/><br/>
+        <div>
+            <table border="1">
+                <tr>
+                    <th>Picture</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                </tr>
+                {{#products}}
+                    <tr>
+                        <td><img src="{{ProductPicture}}" width="100px"></td>
+                        <td>{{ProductId}}</td>
+                        <td>{{ProductName}}</td>
+                        <td>{{ProductPrice}}</td>
+                        <td><a href="/users/{{ProductId}}/edit">Edit Product</a></td>
+                    </tr>
+                {{/products}}
+            </table>
+        </div>
+        <br/><br/>
+        <div>
+           <!-- <nobr>
+                {{#hasPrev}}<a href="/users?page={{prev}}">Prev</a>&nbsp;&nbsp;&nbsp;{{/hasPrev}}
+                {{#hasNext}}<a href="/users?page={{next}}">Next</a>{{/hasNext}}
+            </nobr>-->
+        </div>
+        {{>footer}}
+    </body>
+</html>

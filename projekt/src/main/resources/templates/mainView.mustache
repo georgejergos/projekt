@@ -1,0 +1,79 @@
+{{>header}}
+
+<div class="products-header">
+    <h1>Trending Right Now</h1>
+</div>
+<div class="slideshow-container">
+{{#products}}
+    <div class="mySlides fade" >
+        <div class="numbertext">NR: {{ProductId}}</div>
+            <a href="productinfo17.html">
+                <img src="{{ProductPicture}}" style="width: 100%" alt="{{ProductName}}">
+            </a>
+        <div class="text">{{ProductName}}</div>
+    </div>
+{{/products}}
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+{{#products}}
+    <span class="dot" onclick="currentSlide({{ProductId}})"></span>
+{{/products}}
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+
+<hr class="products-line">
+<div class="products-header">
+    <h2>Our Products</h2>
+</div>
+<div class="card-stor-Container">
+    {{#products}}
+        <div class="products-cards">
+            <div class="products-cards-content">
+                <img src="{{ProductPicture}}" alt="Sko">
+                <h4>{{ProductName}}</h4>
+                <div class="products-text">
+                    <p>AIR FORCE 1 LOW SUPREME MCO CB</p>
+                </div>
+                <p>{{ProductPrice}} kr</p>
+                <button onclick="window.location.href ='productinfo11.html';">More information</button>
+            </div>
+        </div>
+    {{/products}}
+</div>
+
+
+
+{{>footer}}

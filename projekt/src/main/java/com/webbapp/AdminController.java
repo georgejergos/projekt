@@ -35,9 +35,13 @@ public class AdminController {
 @RequestMapping (path="/admin/update", method={RequestMethod.POST, RequestMethod.PUT})
     public String updateProduct(@ModelAttribute("product") Product product, @RequestParam Map<String, String> allRequestParams){
         productService.updateProduct(product);
-    return "redirect:/adminView";
+    return "adminView";
  }
-
+    @RequestMapping (path="/adminView/add", method=RequestMethod.GET)
+    public String addProduct(Model model,@PathVariable ("productAdd") Product productAdd) {
+        model.addAttribute("addProduct", productService.addProduct(productAdd));
+        return "";
+    }
 
 
 }

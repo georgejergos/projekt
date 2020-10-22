@@ -13,10 +13,15 @@
 <body>
 
 <div class="container">
-    <h1>Edit product</h1>
+    <h1>Add product</h1>
     <h5>Please fill in the new information for the product </h5>
-    <form method="Get" action="/adminview" class="was-validated">
+    <form method="post" action="/" class="was-validated">
+
         <div class="form-group">
+            <div class="form-group">
+                <label for="UserName"><b>Product Id :</b></label>
+                <input type="text" class="form-control" id="Number" placeholder="Enter product name" name="Username" required>
+            </div>
 
             <div class="form-group">
                 <label for="UserName"><b>Product Name :</b></label>

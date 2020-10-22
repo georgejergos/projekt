@@ -9,10 +9,10 @@
         <h1>Products List</h1>
 
         <div>
-          <!--  <nobr>
-                <a href="/users/add">Add User</a> |
+          <nobr>
+                <a href="/adminView/add">Add product</a> |
                 <a href="/">Back to Index</a>
-            </nobr>-->
+            </nobr>
         </div>
         <br/><br/>
         <div>
@@ -30,7 +30,7 @@
                         <td>{{ProductId}}</td>
                         <td>{{ProductName}}</td>
                         <td>{{ProductPrice}}</td>
-                        <td><a href="/users/{{ProductId}}/edit">Edit Product</a></td>
+                        <td><a href="/adminView/edit/{{ProductId}}">Edit Product</a></td>
                     </tr>
                 {{/products}}
             </table>
@@ -41,7 +41,9 @@
                 {{#hasPrev}}<a href="/users?page={{prev}}">Prev</a>&nbsp;&nbsp;&nbsp;{{/hasPrev}}
                 {{#hasNext}}<a href="/users?page={{next}}">Next</a>{{/hasNext}}
             </nobr>-->
+
         </div>
+
         {{>footer}}
     </body>
 </html>

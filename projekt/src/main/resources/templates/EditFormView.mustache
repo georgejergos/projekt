@@ -1,3 +1,4 @@
+{{>header}}
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -12,42 +13,30 @@
 <body>
 
 <div class="container">
-    <h1>Customer Form</h1>
-    <h5>Please fill the form below! </h5>
-    <form method="post" action="/" class="was-validated">
+    <h1>Edit product</h1>
+    <h5>Please fill in the new information for the product </h5>
+    <form method="Get" action="/adminview" class="was-validated">
         <div class="form-group">
-            <br>
-            <label for="name">Name: </label>
-            <input type="text" class="form-control" id="name" placeholder="Please enter name" name="name" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="UserName">Username :</label>
-            <input type="text" class="form-control" id="UserName" placeholder="Enter Username" name="Username" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Invalid username please choose a valid one!</div>
-        </div>
 
-        <br>
-        <div class="form-group">
-            <label for="UserMobileNumber">Mobile Number :</label>
-            <input type="number" class="form-control" id="UserMobileNumber" placeholder="Enter Mobile Number"
-                   name="Mobile_number " required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Invalid mobile number please choose a valid one!</div>
+            <div class="form-group">
+                <label for="UserName"><b>Product Name :</b></label>
+                <input type="text" class="form-control" id="Name" placeholder="Enter product name" name="Username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="UserName"><b>Product price</b></label>
+                <input type="text" class="form-control" id="UserName" placeholder="Enter price " name="mobilNu" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="UserEmail"><b>Picture Url :</b></label>
+                <input type="url" class="form-control" id="UserEmail" placeholder="Enter picture url"
+                       name="PrictureUrl " required>
+            </div>
+            <button type="submit" style="background:black" class="btn btn-primary">Back to product list</button>
+            <button type="submit" style="background:black" class="btn btn-primary">Edit</button>
         </div>
-        <br>
-        <div class="form-group">
-            <label for="UserEmail">Email :</label>
-            <input type="email" class="form-control" id="UserEmail" placeholder="Enter a valid email address"
-                   name="Email " required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Invalid email address please choose a valid one!</div>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 

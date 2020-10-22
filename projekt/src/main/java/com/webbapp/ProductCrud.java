@@ -71,21 +71,22 @@ private Connection con;
     public Product addProduct(Product product) {
         try{
             con= DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/SASCruyfmG","SASCruyfmG","NrhSdPrNpJ");
-            String AddProduct = "ADD Product SET ProductName=?, ProductPrice=?, ProductPicture=?, ProductId=? WHERE Product";
-            PreparedStatement statement = con.prepareStatement (AddsProduct);
-            statement.setString(1, product.getProductName());
-            statement.setDouble(2, product.getProductPrice());
-            statement.setString(3, product.getProductPicture());
-            statement.setInt(4, product.getProductId());
+            String addProduct = "INSERT INTO Product (ProductId=?, ProductName=?, ProductPicture=?, ProductPrice=?) VALUES (?, ?, ?, ?)";
+            PreparedStatement statement = con.prepareStatement (addProduct);
 
-            statement.executeAdd();
+            statement.setInt(1, product.getProductId());
+            statement.setString(2, product.getProductName());
+            statement.setString(3, product.getProductPicture());
+            statement.setDouble(4, product.getProductPrice());
+
+            statement.execute();
 
             statement.close();
             con.close();
             return product;
         } catch(SQLException ex) {
             Logger.getLogger(ProductCrud.class.getName()).log(Level.SEVERE,null, ex);
-            }
+        }
         return null;
     }
 

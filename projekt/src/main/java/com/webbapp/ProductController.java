@@ -36,10 +36,16 @@ public class ProductController {
 
         return "footer";
     }
-    @GetMapping(path = "/products")
+
+    @RequestMapping("/addpro")
+    public String addproduct(Model model) {
+
+        return "EditFormView";
+    }
+  /*  @GetMapping(path = "/products")
     public String getP(ModelMap modelMap, Model model){
         model.addAttribute("totaltopay" , shoppingCart.totalToPay());
         modelMap.put("pro", productModel.finalAll());
         return "productView";
-    }
+    }*/
 }
